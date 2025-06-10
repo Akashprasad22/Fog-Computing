@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fog Computing Resource Allocation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fog Computing Resource Allocation Optimizer</h1>
+        <p>A demonstration of optimized resource allocation in fog computing environments</p>
+    </header>
+
+    <main>
+        <section class="architecture-diagram">
+            <h2>Fog Computing Architecture</h2>
+            <div class="diagram-container">
+                <div class="cloud-layer">
+                    <h3>Cloud Layer</h3>
+                    <div class="cloud-server" id="cloud-server">
+                        <div class="server-icon">☁️</div>
+                        <div class="server-stats">
+                            <div>CPU: <span id="cloud-cpu">10%</span></div>
+                            <div>Memory: <span id="cloud-memory">15%</span></div>
+                            <div>Storage: <span id="cloud-storage">5%</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fog-layer">
+                    <h3>Fog Layer</h3>
+                    <div class="fog-nodes">
+                        <div class="fog-node" id="fog-node-1">
+                            <div class="node-icon">🖥️</div>
+                            <div class="node-stats">
+                                <div>CPU: <span id="fog1-cpu">30%</span></div>
+                                <div>Memory: <span id="fog1-memory">25%</span></div>
+                                <div>Storage: <span id="fog1-storage">20%</span></div>
+                            </div>
+                        </div>
+                        <div class="fog-node" id="fog-node-2">
+                            <div class="node-icon">🖥️</div>
+                            <div class="node-stats">
+                                <div>CPU: <span id="fog2-cpu">40%</span></div>
+                                <div>Memory: <span id="fog2-memory">35%</span></div>
+                                <div>Storage: <span id="fog2-storage">30%</span></div>
+                            </div>
+                        </div>
+                        <div class="fog-node" id="fog-node-3">
+                            <div class="node-icon">🖥️</div>
+                            <div class="node-stats">
+                                <div>CPU: <span id="fog3-cpu">20%</span></div>
+                                <div>Memory: <span id="fog3-memory">15%</span></div>
+                                <div>Storage: <span id="fog3-storage">25%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edge-layer">
+                    <h3>Edge Devices</h3>
+                    <div class="edge-devices">
+                        <div class="edge-device" id="device-1">📱</div>
+                        <div class="edge-device" id="device-2">💻</div>
+                        <div class="edge-device" id="device-3">🏠</div>
+                        <div class="edge-device" id="device-4">🚗</div>
+                        <div class="edge-device" id="device-5">📹</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="control-panel">
+            <h2>Resource Allocation Control Panel</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="task-type">Task Type:</label>
+                    <select id="task-type">
+                        <option value="compute">Compute Intensive</option>
+                        <option value="memory">Memory Intensive</option>
+                        <option value="storage">Storage Intensive</option>
+                        <option value="latency">Latency Sensitive</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="device-count">Active Edge Devices:</label>
+                    <input type="range" id="device-count" min="1" max="5" value="3">
+                    <span id="device-count-value">3</span>
+                </div>
+
+                <div class="control-group">
+                    <label for="allocation-strategy">Allocation Strategy:</label>
+                    <select id="allocation-strategy">
+                        <option value="proximity">Proximity-based</option>
+                        <option value="load">Load-balanced</option>
+                        <option value="energy">Energy-efficient</option>
+                        <option value="hybrid">Hybrid Optimization</option>
+                    </select>
+                </div>
+
+                <button id="optimize-btn">Optimize Resource Allocation</button>
+                <button id="reset-btn">Reset Simulation</button>
+            </div>
+        </section>
+
+        <section class="metrics">
+            <h2>Performance Metrics</h2>
+            <div class="metrics-container">
+                <div class="metric-card">
+                    <h3>Response Time</h3>
+                    <div class="metric-value" id="response-time">120 ms</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Energy Consumption</h3>
+                    <div class="metric-value" id="energy-consumption">Medium</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Resource Utilization</h3>
+                    <div class="metric-value" id="resource-utilization">65%</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Cost Efficiency</h3>
+                    <div class="metric-value" id="cost-efficiency">High</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="explanation">
+            <h2>How Fog Computing Optimizes Resource Allocation</h2>
+            <div class="explanation-content">
+                <p>Fog computing extends cloud computing by bringing computation, storage, and networking services closer to the edge devices where data is generated. This architecture offers several advantages for resource allocation:</p>
+                
+                <h3>Key Benefits:</h3>
+                <ul>
+                    <li><strong>Reduced Latency:</strong> Processing data closer to the source minimizes response times for time-sensitive applications.</li>
+                    <li><strong>Bandwidth Conservation:</strong> Only relevant data is sent to the cloud, reducing network congestion.</li>
+                    <li><strong>Location Awareness:</strong> Fog nodes can optimize resource allocation based on geographical proximity.</li>
+                    <li><strong>Scalability:</strong> The hierarchical structure allows for flexible scaling of resources.</li>
+                    <li><strong>Energy Efficiency:</strong> Optimized task distribution reduces overall energy consumption.</li>
+                </ul>
+                
+                <h3>Optimization Strategies:</h3>
+                <p>This demonstration showcases different resource allocation strategies:</p>
+                <ul>
+                    <li><strong>Proximity-based:</strong> Allocates tasks to the nearest fog node to minimize latency.</li>
+                    <li><strong>Load-balanced:</strong> Distributes tasks evenly across fog nodes to prevent overloading.</li>
+                    <li><strong>Energy-efficient:</strong> Prioritizes nodes with lower energy consumption.</li>
+                    <li><strong>Hybrid:</strong> Combines multiple strategies for optimal performance across various metrics.</li>
+                </ul>
+                
+                <p>Use the control panel to experiment with different scenarios and observe how the fog computing architecture dynamically optimizes resource allocation.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Fog Computing Resource Allocation Demonstration | Created for educational purposes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
